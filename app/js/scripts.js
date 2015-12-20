@@ -1,6 +1,7 @@
 'use strict';
 $(document).ready(function() {
-	    var adminUrl = '//localhost:3000/Sign/';
+		var host = window.location.hostname;
+	    var adminUrl = '//'+host+':3000/Sign/';
 	    $('#formSign').validator().submit(function(event) {
 		    if (!event.isDefaultPrevented()) {
 	        event.preventDefault();
