@@ -1,0 +1,26 @@
+{
+	"name": "marpadal/sign",
+    "description": "API to allow sign petitions",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Miguel S. Mendoza",
+            "email": "miguel@smendoza.net",
+            "homepage":"http://smendoza.net"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/MiguelSMendoza/CyberREST.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/MiguelSMendoza/CyberDB.git"
+        }
+    ],
+    "require": {
+        "miguelsmendoza/rest-oauth": "dev-master",
+        "miguelsmendoza/db": "dev-master"
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Sign Form</title>
+<!-- build:css css/style.min.css -->
+<!-- inject:css -->
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- endinject -->
+<!-- endbuild -->
+</head>
+
+<body style="background-color: transparent;">
+    <div class="container">
+        
+            <form id="formSign" method="post" action="" enctype="multipart/form-data"  class="form-horizontal" data-toggle="validator" role="form">
+	            <h2 class="form-horizontal-heading">FIRMA LA PETICIÓN</h2>
+	            <input type="hidden" name="cause" value="reduccioncee"> <input type="hidden" name="task" value="save">
+	            <div class="form-group">
+				    <label for="nif" class="col-xs-3 control-label">NIF</label>
+				    <div class="col-xs-9">
+				    	<input class="form-control" placeholder="Ej.: 06231234R" type="text" id="nif" name="nif" required="required" />
+				    </div>
+			  	</div>
+			  	<div class="form-group">
+				    <label for="name" class="col-xs-3 control-label">Nombre</label>
+				    <div class="col-xs-9">
+				    	<input type="text" class="form-control" id="name" name="name" pattern="^([^0-9]*)$" required="required"/>
+				    </div>
+			  	</div>
+			  	<div class="form-group">
+				    <label for="surname" class="col-xs-3 control-label">Apellidos</label>
+				    <div class="col-xs-9">
+				    	<input type="text" class="form-control" id="surname" name="surname" pattern="^([^0-9]*)$" required="required" />
+				    </div>
+			  	</div>
+				<div class="form-group">
+					<div class="col-xs-offset-3 col-xs-9">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" required="required"> He leído y Acepto la <a href="http://www.anpe-albacete.com/politica-de-privacidad/" target="_blank">Política de Privacidad</a>.
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="help-block with-errors"></div>
+			  	<div class="form-group">
+				    <div class="col-xs-offset-3 col-xs-9">
+				      <button type="submit" class="btn btn-primary" id="boton_sign">Firmar la Petición</button>
+				    </div>
+				  </div>
+				  
+				<div class="alert alert-danger alert-dismissible" role="alert" id="errorModal" aria-hidden="true" style="display:none;">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				
+				</div>
+
+            </form>
+                        
+            <div class="modal fade" tabindex="-1" role="dialog" id="info">
+			  <div class="modal-dialog modal-sm">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h4 class="modal-title">¡Muchas Gracias!</h4>
+			      </div>
+			      <div class="modal-body">
+			       <span class="glyphicon glyphicon-ok" aria-hidden="true"></span> 
+                    <span class="alert-text">Has firmado correctamente la petición.</span><br>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+            
+	            </div>
+<!-- build:js js/app.min.js -->
+<!-- inject:js -->    
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>    
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>    
+<script src="../node_modules/bootstrap-validator/dist/validator.min.js"></script>    
+<script src="js/scripts.js"></script>    
+<!-- endinject -->
+<!-- endbuild -->
+</body>
+</html>
