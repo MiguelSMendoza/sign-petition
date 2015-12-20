@@ -59,13 +59,11 @@ var findSigns = function(db, callback) {
 	db.collection('sign').aggregate(
 		[
 			{ 
-				$unwind: '$nif'
-			},
-			{ $group: { 
-				_id: "$nif", 
-				nombre: {"$first": "$name"}, 
-				apellidos:{"$first": "$surname"}, 
-				causa:{"$first": "$cause"} 
+				$group: { 
+					_id: "$nif", 
+					nombre: {"$first": "$name"}, 
+					apellidos:{"$first": "$surname"}, 
+					causa:{"$first": "$cause"} 
 				}
 			}
 		]
